@@ -1,0 +1,3 @@
+{
+    "files": {{JsonObjects("AllCompany.Documents","Name,DocumentType.name,CreatedOn,CreatedBy.name,description")}
+  }

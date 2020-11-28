@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>macBook Dock</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Archivo:500|Open+Sans:300,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <script src="./main.js"></script>
+
+    <!-- Primary API Key: eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNyc2Etc2hhNTEyIiwidHlwIjoiSldUIn0.eyJ1c2VyTmFtZSI6ImFwaS51c2VyLm1vZGVybiIsInVzZXJJZCI6IjkuMjg1NDIzNzQ1LjM0OTcxMjY1IiwiYXBpS2V5SWQiOiI2NzAuMTAxMTg1LjM0OTcxMjY1IiwiYXBwbGljYXRpb25BY2Nlc3MiOiJBcGkiLCJuYmYiOjE2MDY1NzU4NzAsImV4cCI6MTYzODExMTg3MCwiaXNzIjoiY2xhcml6ZW4uY29tIn0.VMeRxJ9L2TcJsr9GMAe-mKSk9Y5VZjofKjYPQF7GpznFQ2xckTF3EJ7DEGpPvbArcnurAtEiuKjWtjNfABoCyNoQV8nMOWULbkNLBDKoYIMDeYX6KfAOAVYWD7Q5rY5eSyXNoR3k_fMdrLEZAyMD5ng4TINWA92p-TcATQEb5fjoe954I_jQbc_8fVOOGtKaa_uOV4OTkSYEoLrAtGlhsJONca7dBFK7WmS6YWNTClFa2wPbk4-SjNZBX8mgeMGgquv7sNzq6vGTr20NhFS3I4V0HnIA7Q-Vi8JtMBtVYwRt2-MCeGNqgAAsdYKpgIWO9jtwVaOi3w32T4PtkkP2rg -->
+</head>
+<body id="myPage"></body>
+    
+    <div class="text-center" style="margin-bottom: 0px;">
+      
+          
+      <!--<div style="text-align:center;padding:1em 0;"> <h3><a style="text-decoration:none; color: white;" href="https://www.zeitverschiebung.net/en/city/4393217"><span style="color: white;">Current local time in</span><br />Kansas City, MO</a></h3> <iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=en&size=medium&timezone=America%2FChicago" width="100%" height="115" frameborder="0" seamless></iframe></div>-->
+          
+      <!--<div style="height:auto; width:100%;"><iframe src="https://outlook.office365.com/calendar/published/dece1a34c02c4fba94eba7e5af22b81c@clarizen.com/8454805e878a4028b7509ae95883796a10558741899827270250/calendar.html" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="auto" width="100%" allowfullscreen></iframe></div>-->
+        
+      <!-- Table Section -->
+      <div id="masterSwitch">
+        <div id="projectModal" class="container-fluid col-xs-12" style ="display: none;">
+      <div class="row slideanim">
+                  <div class="col-sm-4 col-xs-12">
+                    <div class="panel panel-default text-center" style="background: rgb(0, 0, 0); background: rgba(0, 0, 0, 0.6);">
+                      <div class="panel-heading">
+                        <h4><span class="glyphicon glyphicon-briefcase logo-xsmall"></span> STATE</h4>
+                      </div>
+                      <div class="panel-body">
+                                  <table align="center" id="projStatistics" style="font-size: 14px; width: 80%;">
+                                    <tr><td style="padding: 0 10px; border-left: 6px solid #19c671; text-align: left;"><a style="text-decoration: none; color: #c2d4d8;"  href="https://app2.clarizen.com/Clarizen/Project?viewid=354.63767489.34971265">ACTIVE</a></td><td align="center"><span class="badge" style="background-color: #19c671;"><input size="4" id="rawResultBoxActive" style="border: none; color: #fff; text-align: center; background-color: #19c671; font-weight: bold;" readonly/></span></td></tr>
+                                    <tr><td style="padding: 0 10px; border-left: 6px solid #ccc; text-align: left;"><a style="text-decoration: none; color: #c2d4d8;"  href="https://app2.clarizen.com/Clarizen/Project?viewid=354.63767553.34971265">DRAFT</a></td><td align="center"><span class="badge" style="background-color: #ccc;"><input size="4" id="rawResultBoxDraft" style="border: none; color: #fff; text-align: center; background-color: #ccc; font-weight: bold;" readonly/></span></td></tr>
+                                    <tr><td style="padding: 0 10px; border-left: 6px solid #1890ca; text-align: left;"><a style="text-decoration: none; color: #c2d4d8;"  href="https://app2.clarizen.com/Clarizen/Project?viewid=354.63767617.34971265">COMPLETED</a></td><td align="center"><span class="badge" style="background-color: #1890ca;"><input size="4" id="rawResultBoxCompleted" style="border: none; color: #fff; text-align: center; background-color: #1890ca; font-weight: bold;" readonly/></span></td></tr>
+                                  </table>
+                      </div>
+                    </div>      
+                  </div>     
+                  <div class="col-sm-4 col-xs-12">
+                    <div class="panel panel-default text-center" style="background: rgb(0, 0, 0); background: rgba(0, 0, 0, 0.6);">
+                      <div class="panel-heading">
+                        <h4><span class="glyphicon glyphicon-briefcase logo-xsmall"></span> STATUS</h4>
+                      </div>
+                      <div class="panel-body">
+                                  <table align="center" id="projStatistics2" style="font-size: 14px; width: 80%;">
+                                    <tr><td style="padding: 0 10px; border-left: 6px solid #e64748; text-align: left;"><a style="text-decoration: none; color: #c2d4d8;"  href="https://app2.clarizen.com/Clarizen/Project?viewid=354.63767681.34971265">OFF TRACK</a></td><td align="center"><span class="badge" style="background-color: #e64748;"><input size="4" id="rawResultBoxOffTrack" style="border: none; color: #fff; text-align: center; background-color: #e64748; font-weight: bold;" readonly/></span></td></tr>
+                                    <tr><td style="padding: 0 10px; border-left: 6px solid #ebbb3a; text-align: left;"><a style="text-decoration: none; color: #c2d4d8;"  href="https://app2.clarizen.com/Clarizen/Project?viewid=354.63767745.34971265">AT RISK</a></td><td align="center"><span class="badge" style="background-color: #ebbb3a;"><input size="4" id="rawResultBoxAtRisk" style="border: none; color: #fff; text-align: center; background-color: #ebbb3a; font-weight: bold;" readonly/></span></td></tr>
+                                    <tr><td style="padding: 0 10px; border-left: 6px solid #1bc670; text-align: left;"><a style="text-decoration: none; color: #c2d4d8;"  href="https://app2.clarizen.com/Clarizen/Project?viewid=354.63771649.34971265">ON TRACK</a></td><td align="center"><span class="badge" style="background-color: #1bc670;"><input size="4" id="rawResultBoxOnTrack" style="border: none; color: #fff; text-align: center; background-color: #1bc670; font-weight: bold;" readonly/></span></td></tr>
+                                  </table>
+                      </div>
+                    </div>      
+              </div>       
+                  <div class="col-sm-4 col-xs-12">
+                    <div class="panel panel-default text-center" style="background: rgb(0, 0, 0); background: rgba(0, 0, 0, 0.6);">
+                      <div class="panel-heading">
+                        <h4><span class="glyphicon glyphicon-briefcase logo-xsmall"></span> STATUS ($)</h4>
+                      </div>
+                      <div class="panel-body">
+                                  <table align="center" id="projStatistics3" style="font-size: 14px; width: 80%;">
+                                    <tr><td style="padding: 0 10px; border-left: 6px solid #e64748; text-align: left;"><a style="text-decoration: none; color: #c2d4d8;"  href="https://app2.clarizen.com/Clarizen/Project?viewid=354.63771713.34971265">OFF TRACK ($)</a></td><td align="center"><span class="badge" style="background-color: #e64748;"><input size="4" id="rawResultBoxOffTrackBudget" style="border: none; color: #fff; text-align: center; background-color: #e64748; font-weight: bold;" readonly/></span></td></tr>
+                                    <tr><td style="padding: 0 10px; border-left: 6px solid #ebbb3a; text-align: left;"><a style="text-decoration: none; color: #c2d4d8;"  href="https://app2.clarizen.com/Clarizen/Project?viewid=354.63771841.34971265">AT RISK ($)</a></td><td align="center"><span class="badge" style="background-color: #ebbb3a;"><input size="4" id="rawResultBoxAtRiskBudget" style="border: none; color: #fff; text-align: center; background-color: #ebbb3a; font-weight: bold;" readonly/></span></td></tr>
+                                    <tr><td style="padding: 0 10px; border-left: 6px solid #1bc670; text-align: left;"><a style="text-decoration: none; color: #c2d4d8;"  href="https://app2.clarizen.com/Clarizen/Project?viewid=354.63771777.34971265">ON TRACK ($)</a></td><td align="center"><span class="badge" style="background-color: #1bc670;"><input size="4" id="rawResultBoxOnTrackBudget" style="border: none; color: #fff; text-align: center; background-color: #1bc670; font-weight: bold;" readonly/></span></td></tr>
+                    </table>
+                      </div>
+                        </div>      
+                      </div>
+          </div>
+          
+          
+          
+          <div class="panel panel-default" style="background: rgba(0, 0, 0, 0.6);">
+              <div class="panel-heading">
+                <h4 align="center">PROJECTS</h4>
+              </div>
+              <div class="panel-body table-responsive" id="latestProjects" style="max-height: 32em;">
+                          <!--Generated projects will come here-->
+                </div>
+            </div>    
+        </div>
+          <div id="riskModal" class="container-fluid col-xs-12" style ="display: none;">
+      <div class="row slideanim">
+                  <div class="col-sm-4 col-xs-12">
+                    <div class="panel panel-default text-center" style="background: rgb(0, 0, 0); background: rgba(0, 0, 0, 0.6);">
+                      <div class="panel-heading">
+                        <h4><span class="glyphicon glyphicon-briefcase logo-xsmall"></span> STATE</h4>
+                      </div>
+                      <div class="panel-body">
+                                  <table align="center" id="projStatistics" style="font-size: 14px; width: 80%;">
+                                    <tr><td style="padding: 0 10px; border-left: 6px solid #19c671; text-align: left;"><a style="text-decoration: none; color: #c2d4d8;"  href="https://eu1.clarizen.com/Clarizen/Project?viewid=354.29579653.28168773">ACTIVE</a></td><td align="center"><span class="badge" style="background-color: #19c671;"><input size="4" id="rawResultBoxActive" style="border: none; color: #fff; text-align: center; background-color: #19c671; font-weight: bold;" readonly/></span></td></tr>
+                                    <tr><td style="padding: 0 10px; border-left: 6px solid #ccc; text-align: left;"><a style="text-decoration: none; color: #c2d4d8;"  href="https://eu1.clarizen.com/Clarizen/Project?viewid=354.29579717.28168773">DRAFT</a></td><td align="center"><span class="badge" style="background-color: #ccc;"><input size="4" id="rawResultBoxDraft" style="border: none; color: #fff; text-align: center; background-color: #ccc; font-weight: bold;" readonly/></span></td></tr>
+                                    <tr><td style="padding: 0 10px; border-left: 6px solid #1890ca; text-align: left;"><a style="text-decoration: none; color: #c2d4d8;"  href="https://eu1.clarizen.com/Clarizen/Project?viewid=354.29579781.28168773">COMPLETED</a></td><td align="center"><span class="badge" style="background-color: #1890ca;"><input size="4" id="rawResultBoxCompleted" style="border: none; color: #fff; text-align: center; background-color: #1890ca; font-weight: bold;" readonly/></span></td></tr>
+                                  </table>
+                      </div>
+                    </div>      
+                  </div>     
+                  <div class="col-sm-4 col-xs-12">
+                    <div class="panel panel-default text-center" style="background: rgb(0, 0, 0); background: rgba(0, 0, 0, 0.6);">
+                      <div class="panel-heading">
+                        <h4><span class="glyphicon glyphicon-briefcase logo-xsmall"></span> STATUS</h4>
+                      </div>
+                      <div class="panel-body">
+                                  <table align="center" id="projStatistics2" style="font-size: 14px; width: 80%;">
+                                    <tr><td style="padding: 0 10px; border-left: 6px solid #e64748; text-align: left;"><a style="text-decoration: none; color: #c2d4d8;"  href="https://eu1.clarizen.com/Clarizen/Project?viewid=354.29588037.28168773">OFF TRACK</a></td><td align="center"><span class="badge" style="background-color: #e64748;"><input size="4" id="rawResultBoxOffTrack" style="border: none; color: #fff; text-align: center; background-color: #e64748; font-weight: bold;" readonly/></span></td></tr>
+                                    <tr><td style="padding: 0 10px; border-left: 6px solid #ebbb3a; text-align: left;"><a style="text-decoration: none; color: #c2d4d8;"  href="https://eu1.clarizen.com/Clarizen/Project?viewid=354.29588101.28168773">AT RISK</a></td><td align="center"><span class="badge" style="background-color: #ebbb3a;"><input size="4" id="rawResultBoxAtRisk" style="border: none; color: #fff; text-align: center; background-color: #ebbb3a; font-weight: bold;" readonly/></span></td></tr>
+                                    <tr><td style="padding: 0 10px; border-left: 6px solid #1bc670; text-align: left;"><a style="text-decoration: none; color: #c2d4d8;"  href="https://eu1.clarizen.com/Clarizen/Project?viewid=354.29588229.28168773">ON TRACK</a></td><td align="center"><span class="badge" style="background-color: #1bc670;"><input size="4" id="rawResultBoxOnTrack" style="border: none; color: #fff; text-align: center; background-color: #1bc670; font-weight: bold;" readonly/></span></td></tr>
+                                  </table>
+                      </div>
+                    </div>      
+              </div>       
+                  <div class="col-sm-4 col-xs-12">
+                    <div class="panel panel-default text-center" style="background: rgb(0, 0, 0); background: rgba(0, 0, 0, 0.6);">
+                      <div class="panel-heading">
+                        <h4><span class="glyphicon glyphicon-briefcase logo-xsmall"></span> STATUS ($)</h4>
+                      </div>
+                      <div class="panel-body">
+                                  <table align="center" id="projStatistics3" style="font-size: 14px; width: 80%;">
+                                    <tr><td style="padding: 0 10px; border-left: 6px solid #e64748; text-align: left;"><a style="text-decoration: none; color: #c2d4d8;"  href="https://eu1.clarizen.com/Clarizen/Project?viewid=354.29588421.28168773">OFF TRACK ($)</a></td><td align="center"><span class="badge" style="background-color: #e64748;"><input size="4" id="rawResultBoxOffTrackBudget" style="border: none; color: #fff; text-align: center; background-color: #e64748; font-weight: bold;" readonly/></span></td></tr>
+                                    <tr><td style="padding: 0 10px; border-left: 6px solid #ebbb3a; text-align: left;"><a style="text-decoration: none; color: #c2d4d8;"  href="https://eu1.clarizen.com/Clarizen/Project?viewid=354.29588549.28168773">AT RISK ($)</a></td><td align="center"><span class="badge" style="background-color: #ebbb3a;"><input size="4" id="rawResultBoxAtRiskBudget" style="border: none; color: #fff; text-align: center; background-color: #ebbb3a; font-weight: bold;" readonly/></span></td></tr>
+                                    <tr><td style="padding: 0 10px; border-left: 6px solid #1bc670; text-align: left;"><a style="text-decoration: none; color: #c2d4d8;"  href="https://eu1.clarizen.com/Clarizen/Project?viewid=354.29588485.28168773">ON TRACK ($)</a></td><td align="center"><span class="badge" style="background-color: #1bc670;"><input size="4" id="rawResultBoxOnTrackBudget" style="border: none; color: #fff; text-align: center; background-color: #1bc670; font-weight: bold;" readonly/></span></td></tr>
+                    </table>
+                      </div>
+                        </div>      
+                      </div>
+          </div>
+          
+          
+          
+          <div class="panel panel-default" style="background: rgba(0, 0, 0, 0.6);">
+              <div class="panel-heading">
+                <h4 align="center">RISKS</h4>
+              </div>
+              <div class="panel-body table-responsive" id="latestRisks" style="max-height: 32em;">
+                          <!--Generated risks will come here-->
+                </div>
+            </div>    
+        </div>
+        
+        <div id="issueModal" class="container-fluid col-xs-12" style ="display: none;">
+            <div class="panel panel-default" style="background: #22272b;">
+              <div class="panel-heading">
+                <h4 align="center">ISSUES</h4>
+              </div>
+              <div class="panel-body" style="background: #22272b;">
+                <table class="table">
+                  <thead>
+                  <tr>
+                    <th style="width: 30px;" scope="col">#</th><th style="width: 300px;" scope="col">File</th><th scope="col">Description</th>
+                  </tr>
+                </thead>
+                  <tbody id='resourceTrainingDocs'/>
+                </table>
+              </div>
+            </div>    
+        </div>
+        <div id="requestModal" class="container-fluid col-xs-12" style ="display: none;">
+            <div class="panel panel-default" style="background: #22272b;">
+              <div class="panel-heading">
+                <h4 align="center">REQUESTS</h4>
+              </div>
+              <div class="panel-body" style="background: #22272b;">
+                <table class="table">
+                  <thead>
+                  <tr>
+                    <th style="width: 30px;" scope="col">#</th><th style="width: 300px;" scope="col">File</th><th scope="col">Description</th>
+                  </tr>
+                </thead>
+                  <tbody id='arBrandTrainingDocs'/>
+                </table>
+              </div>
+            </div>    
+        </div>
+        <div id="managerTraining" class="container-fluid col-xs-12" style ="display: none;">
+            <div class="panel panel-default" style="background: #22272b;">
+              <div class="panel-heading">
+                <h4 align="center">MANAGER TRAINING DOCS</h4>
+              </div>
+              <div class="panel-body" id="latestProjects" style="background: #22272b;">
+                          <!--Generated projects will come here-->
+                </div>
+              </div>    
+        </div>
+      </div>
+        
+      <div id="dock-container" style="z-index: 1;">
+       <div id="dock">
+         <ul>
+           <li class="home">
+             <span >Home</span>
+             <a href="#"><img src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9JzMwMHB4JyB3aWR0aD0nMzAwcHgnICBmaWxsPSIjRkZGRkZGIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWw6c3BhY2U9InByZXNlcnZlIiB2ZXJzaW9uPSIxLjEiIHN0eWxlPSJzaGFwZS1yZW5kZXJpbmc6Z2VvbWV0cmljUHJlY2lzaW9uO3RleHQtcmVuZGVyaW5nOmdlb21ldHJpY1ByZWNpc2lvbjtpbWFnZS1yZW5kZXJpbmc6b3B0aW1pemVRdWFsaXR5OyIgdmlld0JveD0iMCAwIDI1OSAyMzYiIHg9IjBweCIgeT0iMHB4IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCI+PGRlZnM+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4KICAgCiAgICAuZmlsMCB7ZmlsbDojRkZGRkZGfQogICAKICA8L3N0eWxlPjwvZGVmcz48Zz48cGF0aCBjbGFzcz0iZmlsMCIgZD0iTTEyNyAxbC0xMjYgMTEzYy0yLDMgLTEsNyAzLDdsMjUgMCAwIDEwOGMwLDQgNCw3IDcsN2w1OSAwYzMsMCA2LC0zIDYsLTZsMCAtNzUgNTggMCAwIDc1YzAsMyAyLDYgNiw2bDU4IDBjNCwwIDcsLTMgNywtN2wwIC0xMDggMjYgMGMzLDAgNSwtNCAyLC03bC0xMjYgLTExM2MtMSwtMSAtMywtMSAtNSwweiI+PC9wYXRoPjwvZz48L3N2Zz4="/></a>
+           </li>
+           <li class="projects">
+             <span>Projects</span>
+             <a href="#"><img src="https://static1app2.clarizen.com/Clarizen/images/icons/ModernTheme/NavigationIcons/nav-projects.svg?version=20200901.348"/></a>
+           </li>
+           <li class="risks">
+             <span >Risks</span>
+             <a href="#"><img src="https://static1app2.clarizen.com/Clarizen/images/icons/ModernTheme/NavigationIcons/nav-risks.svg?version=20200901.348"/></a>
+           </li>
+           <li class="issues">
+             <span >Issues</span>
+             <a href="#"><img src="https://static1app2.clarizen.com/Clarizen/images/icons/ModernTheme/NavigationIcons/nav-issues.svg?version=20200901.348"/></a>
+           </li>
+           <li class="requests">
+             <span>Requests</span>
+             <a href="#"><img src="https://static1app2.clarizen.com/Clarizen/images/icons/ModernTheme/NavigationIcons/nav-requests.svg?version=20200901.348"/></a>
+           </li>
+               <li class="tools">
+             <span>Tools</span>
+             <a href="#"><img src="https://static1app2.clarizen.com/Clarizen/images/icons/ModernTheme/NavigationIcons/nav-settings.svg?version=20200901.348"/></a>
+           </li>
+         </ul>
+       </div>
+      </div>
+
+</body>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+</html>
